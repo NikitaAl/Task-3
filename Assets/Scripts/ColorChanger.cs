@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
+
 
 public class ColorChanger : MonoBehaviour
 {
-
+    
     [SerializeField] private GameObject _currentObject;
     [SerializeField] private TextMeshProUGUI _textR, _textB, _textG;
     [SerializeField] private float _r, _g, _b;
@@ -19,7 +17,6 @@ public class ColorChanger : MonoBehaviour
         _currentObject = selectObject;
         UpdateUI();
     }
-
 
     public void AddR() 
     {
@@ -57,14 +54,10 @@ public class ColorChanger : MonoBehaviour
 
     }
 
-
     private Color ConvertColor(float r, float g, float b)
     {
         return new Color(r / 255.0f, g / 255.0f, b / 255.0f);
     }
-
-
-
 
     private void UpdateColor() 
     {
