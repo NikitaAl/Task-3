@@ -8,6 +8,7 @@ public class ColorButtonHandler : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     [SerializeField] private UnityEvent _event;
     private bool _down;
+    
     public void OnPointerDown(PointerEventData eventData)
     {
         _down = true;
